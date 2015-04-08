@@ -1,6 +1,10 @@
 import serial
 from time import sleep
 
+# TO DO:
+# check and clear all errors
+# figure out necessary delays or how to tell when the instrument is ready for more
+
 class GPIBUSB():
 
 ###################
