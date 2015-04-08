@@ -4,7 +4,8 @@ import matplotlib
 from matplotlib import pyplot as plt
 import numpy as np
 
-# todo output data to table
+# TODO:
+# output data to table
 
 # controling an Agilent E3633A DC Power Supply
 # using prologix usb to gpib adaptor
