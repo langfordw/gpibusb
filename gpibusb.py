@@ -4,6 +4,7 @@ from time import sleep
 # TO DO:
 # check and clear all errors
 # figure out necessary delays or how to tell when the instrument is ready for more
+# convert measurement to float
 
 class GPIBUSB():
 
@@ -36,7 +37,8 @@ class GPIBUSB():
 		return self._readResponse()
 
 	def _readResponse(self):
-		buffer = []
-		while len(buffer) <= 0:
-			buffer = self._rawSerial.read(9999)
-		return buffer.rstrip('\r'+'\n')
+		return self._rawSerial.readline().rstrip('/r'+'/n')
+		# buffer = []
+		# while len(buffer) <= 0:
+		# 	buffer = self._rawSerial.read(9999)
+		# return buffer.rstrip('\r'+'\n')
